@@ -3,6 +3,7 @@
     <h1>{{ msg }}</h1>
 
     <h2>{{hell}} Links</h2>
+    <mt-button type="primary">primary</mt-button>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
@@ -22,6 +23,7 @@
 </template>
 
 <script>
+import {Button} from 'mint-ui'
 export default {
   name: 'HelloWorld',
   data () {
@@ -34,18 +36,19 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 h1, h2 {
   font-weight: normal;
 }
 ul {
   list-style-type: none;
   padding: 0;
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+
 a {
   color: #42b983;
 }
